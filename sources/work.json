@@ -1,0 +1,69 @@
+{
+   "type":"FeatureCollection",
+   "features":[
+      {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Digital Assistant (Internship)",
+            "jobCompany":"GREENPEACE EAST ASIA",
+            "jobDescription":"Created and produced all-rounded multi-media and contents of social media posts, and videos. • Assist execution marketing plans on paid search channels, including Facebook Ads, Instagram ads, SEO, and SEM, to evaluate campaign performance. Posts achieved more than 5K+ likes and videos achieved up to 10K+ views. Total downloads of the WhatsApp stickers are 12K+.",
+            "jobPeriod":"FEBRUARY 2019 – MAY 2019"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.19850081205368,
+               22.334277715420257
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Core Team Member",
+            "jobCompany":"GOOGLE DEVELOPER STUDENT CLUBS",
+            "jobDescription":"Vice-Lead in IoT Division",
+            "jobPeriod":"October 2021 – Present"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.18103829026222,
+               22.305093182582766
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Student Assistant",
+            "jobCompany":"ESP, EDUCATIONAL DEVELOPMENT CENTRE",
+            "jobDescription":"Helped create better MOOC and e-learning video productions, in an effort to enhance the digital literacy skills of PolyU students and teachers.",
+            "jobPeriod":"DECEMBER 2020 – JULY 2021"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.17868196964264,
+               22.302790317340467
+            ]
+         }
+      },
+      {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Developer/ Analyst Programmer",
+            "jobCompany":"NGIS CHINA LTD",
+            "jobDescription":"Helped create web-based mapping service using OpenLayers under the ASP.Net MVC framework. Manipulate different spatial and non-spatial data using PostgreSQL and PostGIS.",
+            "jobPeriod":"July 2021 – Present"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.14942443370818,
+               22.286278927458017
+            ]
+         }
+      }
+   ]
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script src="../scripts/jsts.min.js"></script>
+      <script src="../scripts/openlayers/ol.js"></script>
+      <script src="../scripts/proj4.js"></script>
+      <script src="../scripts/epsg/2326.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>M.K. Hui</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
+        <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
+        <noscript>
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&amp;family=Roboto:wght@300;400;500;700&amp;display=swap"/>
+        </noscript>
+        <link href="../css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
+        <link href="../css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
+        <link href="../css/aos.css?ver=1.2.0" rel="stylesheet">
+        <link href="../css/main.css?ver=1.2.0" rel="stylesheet">
+        <link href="../scripts/openlayers/ol.css" rel="stylesheet"/>
+        <noscript>
+          <style type="text/css">
+            [data-aos] {
+                opacity: 1 !important;
+                transform: translate(0) scale(1) !important;
+            }
+          </style>
+        </noscript>
+      </head>
+<body>
+  <header class="d-print-none">
+    <div class="container text-center text-lg-left">
+      <div class="py-3 clearfix">
+        <a href="./index.html"><h1 class="site-title mb-0">HUI Man Kwong</h1></a>
+        <div class="site-nav">
+          <nav role="navigation">
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/huimankwong/" title="Instagram"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="https://github.com/mankwongg" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+    <div class="px-3 px-lg-4 pb-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div id='master-map'></div>
+            <div id="popup-project" class="ol-popup">
+              <a href="#" id="popup-project-closer" class="ol-popup-closer"></a>
+              <div id="popup-project-content">
+                  <a href="#" id="popup-details"></a>
+              </div>
+          </div>
+          </div>
+        </div>
+    </div>
+    <script src="../js/geomap.mapCommon.js"></script>
+    <script src="../js/geomap.map-layers.js"></script>
+    <script src="../js/geomap.features-interaction.js"></script>
+    <footer class="pt-4 pb-4 text-muted text-center d-print-none">
+      <div class="container">
+        <div class="my-3">
+          <a href="./index.html"><div class="h4">HUI Man Kwong</div></a>  
+          <div class="footer-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"><a class="nav-link" href="https://www.linkedin.com/in/huimankwong/" title="LinkedIn"><i class="fab fa-linkedin"></i><span class="menu-title sr-only">LinkedIn</span></a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="https://github.com/mankwongg" title="Github"><i class="fab fa-github"></i><span class="menu-title sr-only">Github</span></a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="text-small">
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
