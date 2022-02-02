@@ -1,0 +1,1 @@
+﻿Font Awesome Free v5.11.2
