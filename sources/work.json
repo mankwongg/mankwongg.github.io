@@ -65,7 +65,7 @@
             ]
          }
       },
-	        {
+	  {
          "type":"Feature",
          "properties":{
             "jobName":"Summer Intern (Survey Division)",
@@ -79,8 +79,9 @@
                114.16362935726923,
                22.312424495280965
             ]
-         },
-		 	        {
+         }
+	  },
+	  {
          "type":"Feature",
          "properties":{
             "jobName":"Summer Intern (Survey Division)",
