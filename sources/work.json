@@ -65,22 +65,7 @@
             ]
          }
       },
-	  {
-         "type":"Feature",
-         "properties":{
-            "jobName":"Summer Intern (Survey Division)",
-            "jobCompany":"Civil Engineering and Development Department",
-            "jobDescription":"Assist in the land surveying activities. Assist in Building Information Modelling (BIM) application and remote sensing analysis and the development of GIS for surveying application. Assist in the application and development of advanced survey technologies.",
-            "jobPeriod":"July 2022 – August, 2022"
-         },
-         "geometry":{
-            "type":"Point",
-            "coordinates":[
-               114.17755319704563,
-               22.31456988083046
-            ]
-         }
-      },
+
 	  {
          "type":"Feature",
          "properties":{
