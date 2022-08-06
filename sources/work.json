@@ -65,7 +65,7 @@
             ]
          }
       },
-	        {
+	  {
          "type":"Feature",
          "properties":{
             "jobName":"Summer Intern (Survey Division)",
@@ -78,6 +78,22 @@
             "coordinates":[
                114.17755319704563,
                22.31456988083046
+            ]
+         }
+      },
+	  {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Summer Intern (Survey Division)",
+            "jobCompany":"Civil Engineering and Development Department (Lands Works & Development)",
+            "jobDescription":"Assist in the land surveying activities. Assist in the application and development of advanced survey technologies such as 3D laser scanning and GNSS positioning.",
+            "jobPeriod":"July 2022 – August, 2022"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.16611133675094,
+               22.320027970438918
             ]
          }
       }
