@@ -65,7 +65,22 @@
             ]
          }
       },
-
+	  {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Summer Intern (Survey Division)",
+            "jobCompany":"Civil Engineering and Development Department (Port Works & Fill Management)",
+            "jobDescription":"Assist in the hydrograhpic surveying activities. Assist in the application and development of advanced survey technologies such as multi-beam and single-beam in hydrograhpic surveying.",
+            "jobPeriod":"July 2022 – August, 2022"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.16362935726923,
+               22.312424495280965
+            ]
+         }
+      },
 	  {
          "type":"Feature",
          "properties":{
