@@ -43,7 +43,7 @@ GeoMap.olMap.on('click', function (evt) {
 
     function jobFeaturesView(feature) {
         let content = `Job Title: <b>` + feature.get('jobName') + `</b><br><br>` +
-                      `Company: <b>` + feature.get('jobCompany')+ `</b><br><br>` +
+                      `Company: <b>` + feature.get('jobCompany') + `</b><br><br>` +
                       `Details: <b>` + feature.get('jobDescription') + `</b><br><br>` +
                       `Period: <b>` + feature.get('jobPeriod') + `</b><br>`;
         popupProjectContentInfo.innerHTML = content;
