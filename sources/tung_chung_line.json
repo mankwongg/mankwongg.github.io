@@ -1,0 +1,125 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Tung Chung",
+		"line": "TCL",
+		"sta": "TUC"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          113.94148349761963,
+          22.289265180986458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Sunny Bay",
+		"line": "TCL",
+		"sta": "SUN"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.02858018875122,
+          22.33184135557062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Tsing Yi",
+		"line": "TCL",
+		"sta": "TSY"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.10742640495299,
+          22.358371071395965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Lai King",
+		"line": "TCL",
+		"sta": "LAK"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.12607312202454,
+          22.348354179022433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Nam Cheong",
+		"line": "TCL",
+		"sta": "NAC"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15358185768127,
+          22.32650701790758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Olympic",
+		"line": "TCL",
+		"sta": "OLY"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16023641824722,
+          22.3178004445502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Kowloon",
+		"line": "TCL",
+		"sta": "KOW"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.16152119636536,
+          22.30498895889859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+		"name": "Hong Kong",
+		"line": "TCL",
+		"sta": "HOK"
+	  },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          114.15807858109474,
+          22.281937484791925
+        ]
+      }
+    }
+  ]
+}

@@ -42,8 +42,28 @@ window.GeoMap = {
     olStudyFeatureSource: null,
     olWorkFeaturesLayer: null,
     olWorkFeatureSource: null,
+	olLastGeoFeature: null,
+    olTemperatureSource: null,
+    olTemperatureIDWLayer: null,
+    olTemperatureTextLayer: null,
+    olTungChungLine: null,
+    olTungChungLineLayer: null,
+    olBusStopsSource: new ol.source.Vector(),
+    olBusStopsLayer: null,
+    olBusStopsFilteredSource: new ol.source.Vector(),
+    olBusStopsFilteredLayer: null,
+    olGeoSource: new ol.source.Vector(),
+    olGeoLayer: null,
+    olBufferSource: new ol.source.Vector(),
+    olBufferLayer: null,
+    ol3DPNSource: null,
+    ol3DPNLayer: null,
+    ol3DPNFilteredSource: new ol.source.Vector(),
+    ol3DPNFilteredLayer: null,
+    olBufferFeature: null,
 }
 
 window.GeoApp = {
+	olBusSearchDist: 500,
 }
 
