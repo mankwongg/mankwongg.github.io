@@ -20,32 +20,32 @@
       {
          "type":"Feature",
          "properties":{
-            "jobName":"Core Team Member",
-            "jobCompany":"GOOGLE DEVELOPER STUDENT CLUBS",
-            "jobDescription":"Vice-Lead in IoT Division",
-            "jobPeriod":"October 2021 – Present"
+            "jobName":"Temporary Graduate Surveyor",
+            "jobCompany":"EGS (Asia) Limited",
+            "jobDescription":"Marine Section",
+            "jobPeriod":"Janurary, 2023 - March, 2023"
          },
          "geometry":{
             "type":"Point",
             "coordinates":[
-               114.18103829026222,
-               22.305093182582766
+               114.2023019029726,
+               22.29207526872338
             ]
          }
       },
       {
          "type":"Feature",
          "properties":{
-            "jobName":"Student Assistant",
-            "jobCompany":"ESP, EDUCATIONAL DEVELOPMENT CENTRE",
-            "jobDescription":"Helped create better MOOC and e-learning video productions, in an effort to enhance the digital literacy skills of PolyU students and teachers.",
-            "jobPeriod":"DECEMBER 2020 – JULY 2021"
+            "jobName":"Assistant Geotechnical Technician",
+            "jobCompany":"Ove Arup & Partners Hong Kong Ltd",
+            "jobDescription":"Geotechnics & Energy group. Perform GIS analysis and programming.",
+            "jobPeriod":"Feburary, 2023 - Present"
          },
          "geometry":{
             "type":"Point",
             "coordinates":[
-               114.17868196964264,
-               22.302790317340467
+               114.17303089472458,
+               22.341654868445097
             ]
          }
       },
@@ -78,22 +78,6 @@
             "coordinates":[
                114.16362935726923,
                22.312424495280965
-            ]
-         }
-      },
-	  {
-         "type":"Feature",
-         "properties":{
-            "jobName":"Summer Intern (Survey Division)",
-            "jobCompany":"Civil Engineering and Development Department (Lands Works & Development)",
-            "jobDescription":"Assist in the land surveying activities. Assist in the application and development of advanced survey technologies such as 3D laser scanning and GNSS positioning.",
-            "jobPeriod":"July 2022 – August, 2022"
-         },
-         "geometry":{
-            "type":"Point",
-            "coordinates":[
-               114.16611133675094,
-               22.320027970438918
             ]
          }
       }

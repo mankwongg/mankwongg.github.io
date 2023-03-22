@@ -35,6 +35,19 @@ $(function(){
         visible: false,
     });
 
+    // GeoMap.webLayer = new ol.layer.Image({
+    //     source: GeoMap.olTuenMaLine,
+    //     style: function (feature) {
+    //         return new ol.style.Style({
+    //             image: new ol.style.Icon({
+    //                 src: '../images/tuen_ma_line.png',
+    //                 scale: 0.04,
+    //             })
+    //         });
+    //     },
+    //     visible: false,
+    // });
+
     GeoMap.olMap.addLayer(GeoMap.olTungChungLineLayer);
     GeoMap.olMap.addLayer(GeoMap.olTuenMaLineLayer);
 })
