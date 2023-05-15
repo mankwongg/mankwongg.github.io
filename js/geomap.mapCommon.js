@@ -48,6 +48,8 @@ window.GeoMap = {
     olTemperatureTextLayer: null,
     olTungChungLine: null,
     olTungChungLineLayer: null,
+    olTsuenWanLine: null,
+    olTsuenWanLineLayer: null,
     olBusStopsSource: new ol.source.Vector(),
     olBusStopsLayer: null,
     olBusStopsFilteredSource: new ol.source.Vector(),

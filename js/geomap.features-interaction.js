@@ -15,6 +15,10 @@ $(function(){
         this.checked ? GeoMap.olTuenMaLineLayer.setVisible(true) : GeoMap.olTuenMaLineLayer.setVisible(false);
     });
 
+    $('#tsw-line').on('click', function(){
+        this.checked ? GeoMap.olTsuenWanLineLayer.setVisible(true) : GeoMap.olTsuenWanLineLayer.setVisible(false);
+    });
+
     $('#bus-stops').on('click', function(){
         this.checked ? GeoMap.olBusStopsFilteredLayer.setVisible(true) : GeoMap.olBusStopsFilteredLayer.setVisible(false);
     });
@@ -32,7 +36,8 @@ $(function(){
     });
 
     // Tung Chung Line view panel
-    function TCLfeaturesView(terminusArrivalTime, station, toHKArrivalTimeList, toTCArrivalTimeList) {
+    function TCLfeaturesView(terminusArrivalTime, name, station, toHKArrivalTimeList, toTCArrivalTimeList) {
+        const time = new Date();
         if(`TUC` == station){
             let direction = `<b>To Hong Kong: </b><br>`;
             $popupProjectContentInfo.html(direction);
@@ -79,11 +84,13 @@ $(function(){
                 toTCArrivalTimeList[i] == '0' ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + toTCArrivalTimeList[i] + ` min</b><br>`);
             };
         }
-
+        $popupProjectContentInfo.append(`<br>` + `Station: ` + `<b>` + name);
+        $popupProjectContentInfo.append(`<br>` + `Updated at: ` + `<b>` + time.toLocaleTimeString());
     };
 
     // Tuen Ma Line view panel
-    function TMLfeaturesView(terminusArrivalTime, station, toTMArrivalTimeList, toWKSArrivalTimeList) {
+    function TMLfeaturesView(terminusArrivalTime, name, station, toTMArrivalTimeList, toWKSArrivalTimeList) {
+        const time = new Date();
         if(`TUM` == station){
             let direction = `<b>To Wu Kai Sha: </b><br>`;
             $popupProjectContentInfo.html(direction);
@@ -134,6 +141,64 @@ $(function(){
                 toWKSArrivalTimeList[i] == 0 ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + toWKSArrivalTimeList[i] + ` min</b><br>`);
             };
         }
+        $popupProjectContentInfo.append(`<br>` + `Station: ` + `<b>` + name);
+        $popupProjectContentInfo.append(`<br>` + `Updated at: ` + `<b>` + time.toLocaleTimeString());
+    };
+
+    // Tsuen Wan Line view panel
+    function TWLfeaturesView(terminusArrivalTime, name, station, toCENArrivalTimeList, toTSWArrivalTimeList) {
+        const time = new Date();
+        if(`TSW` == station){
+            let direction = `<b>To Central: </b><br>`;
+            $popupProjectContentInfo.html(direction);
+            // console.log(terminusArrivalTime);
+            for(let i = 0; i < terminusArrivalTime.length; i++){
+                if(i == 0 && parseInt(terminusArrivalTime[0]) > 55) {
+                    $popupProjectContentInfo.append('Next train: <b>Leaving</b><br>')
+                    continue
+                }
+                terminusArrivalTime[i] == 0 ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + terminusArrivalTime[i] + ` min</b><br>`);
+            };
+        } else if (`CEN` == station){
+            let direction = `<b>To Tsuen Wan: </b><br>`;
+            $popupProjectContentInfo.html(direction);
+
+            for(let i = 0; i < terminusArrivalTime.length; i++){
+                if(i == 0 && parseInt(terminusArrivalTime[0]) > 55) {
+                    $popupProjectContentInfo.append('Next train: <b>Leaving</b><br>')
+                    continue
+                }
+                terminusArrivalTime[i] == 0 ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + terminusArrivalTime[i] + ` min</b><br>`);
+            };
+        } else {
+            let TSWdirection = `<b>To Tsuen Wan: </b><br>`;
+            let CENdirection = `<b>To Central: </b><br>`;
+            // console.log(toTMArrivalTimeList);
+            // console.log(toWKSArrivalTimeList);
+
+            $popupProjectContentInfo.html(TSWdirection);
+
+            for(let i = 0; i < toTSWArrivalTimeList.length; i++){
+                if(i == 0 && parseInt(toTSWArrivalTimeList[0]) > 55) {
+                    $popupProjectContentInfo.append('Next train: <b>Leaving</b><br>')
+                    continue
+                }
+                // console.log(toTMArrivalTimeList[i])
+                toTSWArrivalTimeList[i] == 0 ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + toTSWArrivalTimeList[i] + ` min</b><br>`);
+            };
+
+            $popupProjectContentInfo.append(`<br>` + CENdirection);
+
+            for(let i = 0; i < toCENArrivalTimeList.length; i++){
+                if(i == 0 && parseInt(toCENArrivalTimeList[0]) > 55) {
+                    $popupProjectContentInfo.append('Next train: <b>Leaving</b><br>')
+                    continue
+                }
+                toCENArrivalTimeList[i] == 0 ? $popupProjectContentInfo.append(`Next train: <b>Arriving/Leaving</b><br>`) : $popupProjectContentInfo.append(`Next train: <b>` + toCENArrivalTimeList[i] + ` min</b><br>`);
+            };
+        }
+        $popupProjectContentInfo.append(`<br>` + `Station: ` + `<b>` + name);
+        $popupProjectContentInfo.append(`<br>` + `Updated at: ` + `<b>` + time.toLocaleTimeString());
     };
 
     function busStopView(busRouteNumber, stopName) {
@@ -206,6 +271,7 @@ $(function(){
         } catch {
             $popupProjectContentInfo.html('<b>ETA information for route ' + route + ' is not avaliable now</b>') 
         }
+        $popupProjectContentInfo.append(`<br>` + `Updated at: ` + `<b>` + time.toLocaleTimeString());
     }
 
     GeoMap.olMap.on('click', function (evt) {
@@ -281,6 +347,15 @@ $(function(){
             }
         });
 
+        var tsuenWanLineStopFt = GeoMap.olMap.forEachFeatureAtPixel(evt.pixel,
+            function (ft, l) {
+                return ft;
+            }, {
+            layerFilter: function (layer) {
+                    return layer === GeoMap.olTsuenWanLineLayer
+            }
+        });
+
         var busStopFilteredFt = GeoMap.olMap.forEachFeatureAtPixel(evt.pixel,
             function (ft, l) {
                 return ft;
@@ -314,7 +389,7 @@ $(function(){
                             };
                             arrivalTimeList.push(minArrival);
                         };
-                        TCLfeaturesView(arrivalTimeList, tungChungLineStopFt.get('sta'));
+                        TCLfeaturesView(arrivalTimeList, tungChungLineStopFt.get('name'), tungChungLineStopFt.get('sta'));
                     } else if(`TCL-HOK` == thisStop){
                         let arrivalTimeList = [];
                         for(let i = 0; i < results.data[`TCL-` + tungChungLineStopFt.get('sta')].UP.length; i++){
@@ -326,7 +401,7 @@ $(function(){
                             };
                             arrivalTimeList.push(minArrival);
                         };
-                        TCLfeaturesView(arrivalTimeList, tungChungLineStopFt.get('sta'));
+                        TCLfeaturesView(arrivalTimeList, tungChungLineStopFt.get('name'), tungChungLineStopFt.get('sta'));
                     } else {
                         let toHKArrivalTimeList = [];
                         let toTCArrivalTimeList = [];
@@ -350,7 +425,7 @@ $(function(){
                             toHKArrivalTimeList.push(minArrival);
                         };
 
-                        TCLfeaturesView(" ", tungChungLineStopFt.get('sta'), toHKArrivalTimeList, toTCArrivalTimeList);
+                        TCLfeaturesView(" ", tungChungLineStopFt.get('name'), tungChungLineStopFt.get('sta'), toHKArrivalTimeList, toTCArrivalTimeList);
                     }
                 }
             });
@@ -380,7 +455,7 @@ $(function(){
                             };
                             arrivalTimeList.push(minArrival);
                         };
-                        TMLfeaturesView(arrivalTimeList, tuenMaLineStopFt.get('sta'));
+                        TMLfeaturesView(arrivalTimeList, tuenMaLineStopFt.get('name'), tuenMaLineStopFt.get('sta'));
                     } else if(`TML-WKS` == thisStop){
                         let arrivalTimeList = [];
                         for(let i = 0; i < results.data[`TML-` + tuenMaLineStopFt.get('sta')].UP.length; i++){
@@ -392,7 +467,7 @@ $(function(){
                             };
                             arrivalTimeList.push(minArrival);
                         };
-                        TMLfeaturesView(arrivalTimeList, tuenMaLineStopFt.get('sta'));
+                        TMLfeaturesView(arrivalTimeList, tuenMaLineStopFt.get('name'), tuenMaLineStopFt.get('sta'));
                     } else {
                         let toWKSArrivalTimeList = [];
                         let toTMArrivalTimeList = [];
@@ -416,7 +491,73 @@ $(function(){
                             toTMArrivalTimeList.push(minArrival);
                         };
 
-                        TMLfeaturesView("", tuenMaLineStopFt.get('sta'), toTMArrivalTimeList, toWKSArrivalTimeList);
+                        TMLfeaturesView("", tuenMaLineStopFt.get('name'), tuenMaLineStopFt.get('sta'), toTMArrivalTimeList, toWKSArrivalTimeList);
+                    }
+                }
+            });
+            GeoMap.olMap.addOverlay(popupProjectLay);
+        }
+
+        // Tuen Ma Line feature stops
+        if (tsuenWanLineStopFt) {
+            $.ajax({
+                type:'GET',
+                url:`https://rt.data.gov.hk/v1/transport/mtr/getSchedule.php?line=` + tsuenWanLineStopFt.get('line') + `&sta=` + tsuenWanLineStopFt.get('sta'),
+                success: function(results){
+                    const time = new Date();
+
+                    console.log(results);
+                    for(var key in results.data){
+                        var thisStop = key;
+                    };
+                    if(`TWL-TSW` == thisStop) {
+                        let arrivalTimeList = [];
+                        for(let i = 0; i < results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].DOWN.length; i++){
+                            let toCENDirection = results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].DOWN[i].time;
+                            if (toCENDirection.split(":")[1]  - time.getMinutes() < 0){
+                                var minArrival = toCENDirection.split(":")[1]  - time.getMinutes() + 60;
+                            } else {
+                                var minArrival = toCENDirection.split(":")[1]  - time.getMinutes();
+                            };
+                            arrivalTimeList.push(minArrival);
+                        };
+                        TWLfeaturesView(arrivalTimeList, tsuenWanLineStopFt.get('name'), tsuenWanLineStopFt.get('sta'));
+                    } else if(`TWL-CEN` == thisStop){
+                        let arrivalTimeList = [];
+                        for(let i = 0; i < results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].UP.length; i++){
+                            let toTSWirection = results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].UP[i].time;
+                            if (toTSWirection.split(":")[1]  - time.getMinutes() < 0){
+                                var minArrival = toTSWirection.split(":")[1]  - time.getMinutes() + 60;
+                            } else {
+                                var minArrival = toTSWirection.split(":")[1]  - time.getMinutes();
+                            };
+                            arrivalTimeList.push(minArrival);
+                        };
+                        TWLfeaturesView(arrivalTimeList, tsuenWanLineStopFt.get('name'), tsuenWanLineStopFt.get('sta'));
+                    } else {
+                        let toTSWArrivalTimeList = [];
+                        let toCENArrivalTimeList = [];
+
+                        for(let i = 0; i < results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].DOWN.length; i++){
+                            let toCENDirection = results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].DOWN[i].time;
+                            if (toCENDirection.split(":")[1]  - time.getMinutes() < 0){
+                                var minArrival = toCENDirection.split(":")[1]  - time.getMinutes() + 60;
+                            } else {
+                                var minArrival = toCENDirection.split(":")[1]  - time.getMinutes();
+                            };
+                            toCENArrivalTimeList.push(minArrival);
+                        };
+                        for(let i = 0; i < results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].UP.length; i++){
+                            let toTSWDirection = results.data[`TWL-` + tsuenWanLineStopFt.get('sta')].UP[i].time;
+                            if (toTSWDirection.split(":")[1]  - time.getMinutes() < 0){
+                                var minArrival = toTSWDirection.split(":")[1]  - time.getMinutes() + 60;
+                            } else {
+                                var minArrival = toTSWDirection.split(":")[1]  - time.getMinutes();
+                            };
+                            toTSWArrivalTimeList.push(minArrival);
+                        };
+
+                        TWLfeaturesView("", tsuenWanLineStopFt.get('name'), tsuenWanLineStopFt.get('sta'), toCENArrivalTimeList, toTSWArrivalTimeList);
                     }
                 }
             });

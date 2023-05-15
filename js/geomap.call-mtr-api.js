@@ -35,6 +35,24 @@ $(function(){
         visible: false,
     });
 
+    GeoMap.olTsuenWanLine = new ol.source.Vector({
+        url: `../sources/tsuen_wan_line.json`,
+        format: new ol.format.GeoJSON()
+    });
+
+    GeoMap.olTsuenWanLineLayer = new ol.layer.Vector({
+        source: GeoMap.olTsuenWanLine,
+        style: function (feature) {
+            return new ol.style.Style({
+                image: new ol.style.Icon({
+                    src: '../images/tsuen_wan_line.png',
+                    scale: 0.04,
+                })
+            });
+        },
+        visible: false,
+    });
+
     // GeoMap.webLayer = new ol.layer.Image({
     //     source: GeoMap.olTuenMaLine,
     //     style: function (feature) {
@@ -50,4 +68,6 @@ $(function(){
 
     GeoMap.olMap.addLayer(GeoMap.olTungChungLineLayer);
     GeoMap.olMap.addLayer(GeoMap.olTuenMaLineLayer);
+    GeoMap.olMap.addLayer(GeoMap.olTsuenWanLineLayer);
+
 })

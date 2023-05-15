@@ -1,0 +1,245 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Tsuen Wan",
+            "line":"TWL",
+            "sta":"TSW"
+        },
+        "geometry": {
+          "coordinates": [
+            114.11777501531986,
+            22.373558335830978
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Tai Wo Hau",
+            "line":"TWL",
+            "sta":"TWH"
+        },
+        "geometry": {
+          "coordinates": [
+            114.12552843692174,
+            22.370848227191075
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Kwai Hing",
+            "line":"TWL",
+            "sta":"KWH"
+        },
+        "geometry": {
+          "coordinates": [
+            114.13119571631654,
+            22.363046830232435
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Kwai Fong",
+            "line":"TWL",
+            "sta":"KWF"
+        },
+        "geometry": {
+          "coordinates": [
+            114.12778978461603,
+            22.356816415851526
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Lai King",
+            "line":"TWL",
+            "sta":"LAK"
+        },
+        "geometry": {
+          "coordinates": [
+            114.12605250833093,
+            22.3484021992615
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Mei Foo",
+            "line":"TWL",
+            "sta":"MEF"
+        },
+        "geometry": {
+          "coordinates": [
+            114.13983863393645,
+            22.337554181720876
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Lai Chi Kok",
+            "line":"TWL",
+            "sta":"LCK"
+        },
+        "geometry": {
+          "coordinates": [
+            114.14836177355363,
+            22.337331517160223
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Chueng Sha Wan",
+            "line":"TWL",
+            "sta":"CSW"
+        },
+        "geometry": {
+          "coordinates": [
+            114.15614372320937,
+            22.335503965532027
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Sham Shui Po",
+            "line":"TWL",
+            "sta":"SSP"
+        },
+        "geometry": {
+          "coordinates": [
+            114.16244598281173,
+            22.330604814367973
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Prince Edward",
+            "line":"TWL",
+            "sta":"PRE"
+        },
+        "geometry": {
+          "coordinates": [
+            114.1683001420771,
+            22.32451448524064
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Mong Kok",
+            "line":"TWL",
+            "sta":"MOK"
+        },
+        "geometry": {
+          "coordinates": [
+            114.16933786323324,
+            22.319317771662227
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Yau Ma Tei",
+            "line":"TWL",
+            "sta":"YMT"
+        },
+        "geometry": {
+          "coordinates": [
+            114.17079239864978,
+            22.312295453568012
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Jordan",
+            "line":"TWL",
+            "sta":"JOR"
+        },
+        "geometry": {
+          "coordinates": [
+            114.17172457432804,
+            22.30475120832935
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Tsim Sha Tsui",
+            "line":"TWL",
+            "sta":"TST"
+        },
+        "geometry": {
+          "coordinates": [
+            114.17220806676971,
+            22.297175664029666
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Admiralty",
+            "line":"TWL",
+            "sta":"ADM"
+        },
+        "geometry": {
+          "coordinates": [
+            114.16627364807778,
+            22.278613324394044
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "type": "Feature",
+        "properties": {
+            "name":"Central",
+            "line":"TWL",
+            "sta":"CEN"
+        },
+        "geometry": {
+          "coordinates": [
+            114.1580579184523,
+            22.28191928550153
+          ],
+          "type": "Point"
+        }
+      }
+    ]
+  }
