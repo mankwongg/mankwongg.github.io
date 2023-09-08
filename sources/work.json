@@ -4,48 +4,32 @@
       {
          "type":"Feature",
          "properties":{
-            "jobName":"Digital Assistant (Internship)",
-            "jobCompany":"GREENPEACE EAST ASIA",
-            "jobDescription":"Created and produced all-rounded multi-media and contents of social media posts, and videos. • Assist execution marketing plans on paid search channels, including Facebook Ads, Instagram ads, SEO, and SEM, to evaluate campaign performance. Posts achieved more than 5K+ likes and videos achieved up to 10K+ views. Total downloads of the WhatsApp stickers are 12K+.",
-            "jobPeriod":"FEBRUARY 2019 – MAY 2019"
-         },
-         "geometry":{
-            "type":"Point",
-            "coordinates":[
-               114.19850081205368,
-               22.334277715420257
-            ]
-         }
-      },
-      {
-         "type":"Feature",
-         "properties":{
-            "jobName":"Temporary Graduate Surveyor",
-            "jobCompany":"EGS (Asia) Limited",
-            "jobDescription":"Marine Section",
-            "jobPeriod":"Janurary, 2023 - March, 2023"
-         },
-         "geometry":{
-            "type":"Point",
-            "coordinates":[
-               114.2023019029726,
-               22.29207526872338
-            ]
-         }
-      },
-      {
-         "type":"Feature",
-         "properties":{
             "jobName":"Assistant Geotechnical Technician",
             "jobCompany":"Ove Arup & Partners Hong Kong Ltd",
             "jobDescription":"Geotechnics & Energy group. Perform GIS analysis and programming.",
-            "jobPeriod":"Feburary, 2023 - Present"
+            "jobPeriod":"Feburary, 2023 - July, 2023"
          },
          "geometry":{
             "type":"Point",
             "coordinates":[
                114.1739553054384,
                22.338028498563407
+            ]
+         }
+      },
+	        {
+         "type":"Feature",
+         "properties":{
+            "jobName":"Land Surveying Graduate",
+            "jobCompany":"Lands Department, HKSAR",
+            "jobDescription":"Undertaking professional training under the Hong Kong Institute of Surveyors",
+            "jobPeriod":"September, 2023 - Present"
+         },
+         "geometry":{
+            "type":"Point",
+            "coordinates":[
+               114.20842086078841,
+               22.292335026981206
             ]
          }
       },
